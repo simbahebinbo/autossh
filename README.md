@@ -32,14 +32,16 @@ Auto Login SSH Server (expect-based)
 # Install Dependencies
 ```
 Linux
-yum install expect
-apt-get install expect
+centos:
+$ sudo yum install expect
+Ubuntu:
+$ sudo apt-get install expect
 ```
 
 # Install AutoSSH
 
 ```
-$ git clone https://github.com/FeeiCN/autossh.git
+$ git clone https://github.com/lansheng228/autossh.git
 $ sudo cp autossh/autossh /usr/local/bin/
 ```
 
