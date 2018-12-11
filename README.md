@@ -1,3 +1,31 @@
+在原版基础上略作修改。
+支持使用mosh以便提供不间断的连接。
+使用之前，需要先安装mosh
+
+mac上的安装:
+
+```
+$ brew install mosh
+```
+
+centos上的安装:
+
+```
+$ sudo yum install mosh
+```
+
+ubuntu上的安装:
+
+```
+$ sudo apt install mosh
+```
+
+关于mosh的详情: https://github.com/mobile-shell/mosh
+
+
+
+
+
 # AutoSSH
 Auto Login SSH Server (expect-based)
 
