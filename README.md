@@ -1,29 +1,5 @@
 在原版基础上略作修改。
-支持使用mosh以便提供不间断的连接。
-使用之前，需要先安装mosh
-
-mac上的安装:
-
-```
-$ brew install mosh
-```
-
-centos上的安装:
-
-```
-$ sudo yum install mosh
-```
-
-ubuntu上的安装:
-
-```
-$ sudo apt install mosh
-```
-
-关于mosh的详情: https://github.com/mobile-shell/mosh
-
-
-
+支持使用密钥文件。
 
 
 # AutoSSH
@@ -32,8 +8,10 @@ Auto Login SSH Server (expect-based)
 # Install Dependencies
 ```
 Linux
+
 centos:
 $ sudo yum install expect
+
 Ubuntu:
 $ sudo apt-get install expect
 ```
@@ -49,13 +27,13 @@ $ sudo cp autossh/autossh /usr/local/bin/
 
 ```bash
 $ cat ~/.autosshrc
-server_name|192.168.1.110|root|password|port|is_bastion
+server_name|192.168.1.110|root|password|port|is_bastion|secret_key
 ```
 
 # Example
 ```bash
 $ cat ~/.autosshrc
-wufeifei|192.168.1.1|root|password|22|1
+wufeifei|192.168.1.1|root|password|22|1|~/xxx.pem
 ```
 
 
