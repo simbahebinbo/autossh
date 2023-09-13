@@ -87,9 +87,9 @@ for server in $AUTO_SSH_CONFIG; do
             echo '    stty rows $rows columns $cols < $spawn_out(slave,name)' >> $FILE
             echo '} WINCH' >> $FILE
     if [ "$SECRET_KEY" == "" ]; then
-          echo "spawn ssh -p$PORT -l "$NAME $IP >> $FILE
+          echo "spawn ssh -o ServerAliveInterval=30 -p$PORT -l "$NAME $IP >> $FILE
     else
-          echo "spawn ssh -i $SECRET_KEY -p$PORT -l "$NAME $IP >> $FILE
+          echo "spawn ssh -o ServerAliveInterval=30 -i $SECRET_KEY -p$PORT -l "$NAME $IP >> $FILE
     fi
    
     if [ "$PASS" != "" ]; then
